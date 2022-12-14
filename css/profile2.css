@@ -1,0 +1,211 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: rgb(214, 183, 144);
+  background: linear-gradient(
+    180deg,
+    rgba(214, 183, 144, 1) 0%,
+    rgba(208, 173, 131, 1) 50%,
+    rgba(196, 155, 111, 1) 100%
+  );
+}
+.header h1 {
+  font-size: 50 !important;
+  font-weight: bold;
+}
+.main {
+  background-color: #fff;
+  border-radius: 70px 70px 0 0;
+  height: 100%;
+}
+.main h2 {
+  font-size: 2rem;
+  line-height: 1.8;
+}
+.main .logo_mobifone {
+  padding: 60px;
+}
+.main form {
+  padding: 30px;
+}
+.inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.inp .label {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  transform-origin: 0 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+.inp .focus-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.05); */
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  color: #000;
+}
+.inp input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 35px 15px 0 12px;
+  height: 65px;
+  font-size: 16px;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  color: #000;
+  transition: all 0.15s ease;
+  font-weight: bold;
+}
+.inp input:hover {
+  background: rgba(0, 0, 0, 0.04);
+  box-shadow: inset 0 -10px 0 rgba(0, 0, 0, 0.5);
+}
+.inp input:not(:placeholder-shown) + .label {
+  color: rgba(0, 0, 0, 0.5);
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+.inp input:focus {
+  background: rgba(0, 0, 0, 0.05);
+  outline: none;
+  box-shadow: inset 0 -2px 0 #0077ff;
+}
+.inp input:focus + .label {
+  color: #000000;
+  transform: translate3d(0, -20px, 0) scale(0.75);
+}
+.inp input:focus + .label + .focus-bg {
+  transform: scaleX(1);
+  transition: all 0.1s ease;
+}
+.inputUser{
+  display: none;
+}
+.field-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: rgba(41, 41, 41, 0.9);
+}
+.checkbox-wrap {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #000;
+}
+.checkbox-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.checkmark:after {
+  content: "\f0c8";
+  font-family: "FontAwesome";
+  position: absolute;
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 20px;
+  margin-top: -4px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .checkmark:after {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+.checkbox-wrap input:checked ~ .checkmark:after {
+  display: inline-block;
+  content: "\f14a";
+  font-family: "FontAwesome";
+  color: rgba(0, 0, 0, 0.2);
+}
+.checkbox-primary {
+  color: #000;
+}
+.checkbox-primary input:checked ~ .checkmark:after {
+  color: #c2996f;
+}
+.change-password {
+  text-decoration: none;
+  display: inline-block;
+  color: #5d5e5e;
+  position: relative;
+}
+.forget-password {
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+  position: relative;
+  font-weight: bold;
+}
+button[type="submit"] {
+  display: none;
+  background: rgb(214, 183, 144);
+  background: linear-gradient(
+    180deg,
+    rgba(214, 183, 144, 1) 0%,
+    rgba(208, 173, 131, 1) 50%,
+    rgba(196, 155, 111, 1) 100%
+  );
+}
+button[type="submit"]:hover{
+  background: rgb(199, 139, 66);
+}
+/* Modal css */
+#changePassModal{
+    border-radius: 30px;
+}
+#changePassModal .modal-header {
+  background: #f3eae4;
+  border-radius: 0 0 50px 50px;
+}
+#changePassModal .modal-header button{
+    position: relative;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+#changePassModal .modal-header img {
+    position: relative;
+    top: 80px;
+}
