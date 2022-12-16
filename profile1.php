@@ -17,26 +17,26 @@
     }
 </style>
 <nav class="navbar navbar-light pt-3">
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleProfile1">
         <i class="fa-solid fa-bars text-black fs-1"></i>
     </button>
-    <div class="navbar-collapse pt-3 collapse text-center bg-light rounded-3" id="navbarTogglerDemo01">
+    <div class="navbar-collapse pt-3 collapse text-center bg-light rounded-3" id="navbarToggleProfile1">
         <img src="./images/header_profile.png" alt="logo_Mcard" width="250">
         <ul class="navbar-nav me-auto my-3 mb-lg-0">
             <li class="nav-item my-2">
-                <a class="nav-link fw-bold fix-info" aria-current="page" data-bs-toggle="modal" data-bs-target="#ConfirmPass" href="#"><i class="fa-solid fa-wrench pe-2"></i>Chỉnh sửa thông tin</a>
+                <a class="nav-link fw-bold fix-info" data-bs-toggle="modal" data-bs-target="#ConfirmPass"><i class="fa-solid fa-wrench pe-2"></i>Chỉnh sửa thông tin</a>
             </li>
             <li class="nav-item my-2">
-                <a class="nav-link fw-bold" data-bs-toggle="modal" data-bs-target="#changePassModal" href="#"> <i class="fa-solid fa-key pe-2"></i>Đổi mật khẩu</a>
+                <a class="nav-link fw-bold" data-bs-toggle="modal" data-bs-target="#changePassModal"> <i class="fa-solid fa-key pe-2"></i>Đổi mật khẩu</a>
             </li>
             <li class="nav-item my-2">
-                <a class="nav-link fw-bold" data-bs-toggle="modal" data-bs-target="#changePassModal" href="#"><i class="fa-solid fa-arrow-right-from-bracket pe-2"></i>Đăng xuất</a>
+                <a class="nav-link fw-bold" href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket pe-2"></i>Đăng xuất</a>
             </li>
     </div>
 </nav>
 <div class="container_fluid">
-    <div class="container">
-        <div class="row mx-auto text-center align-items-center wave">
+    <div class="container user_avatarName">
+        <div class="row mx-auto text-center align-items-center wave pb-3">
             <!-- <img src="./images/user_avatar.png" alt="avatar_profiel" width="150"> -->
             <div class="col-6">
                 <form method="post" class="pt-3">
@@ -64,7 +64,7 @@
         <form action="" method="post" class="row px-4 mt-5">
             <div class="form-group mt-4">
                 <label for="username" class="inp">
-                    <input type="text" class="form-control inputUser" name="tenkh" id="tenkh" value="<?= $tenkh ?>" required>
+                    <input type="text" class="form-control inputUser text-white ps-5 mt-3" name="tenkh" id="tenkh" value="<?= $tenkh ?>" required>
                     <input type="hidden" name="stt" id="stt" value="<?php echo @$stt; ?>" style="width:100%;">
                     <input type="hidden" name="matkhautext" id="matkhautext" value="<?php echo @$matkhautext; ?>" style="width:100%;">
                     <input type="hidden" name="urlQR" id="urlQR" value="<?php echo @$urlQR; ?>" style="width:100%;">
@@ -76,7 +76,7 @@
             </div>
             <div class="form-group mt-4">
                 <label for="username" class="inp">
-                    <input type="text" class="form-control inputUser" name="email" id="email" value="<?= $email ?>" required>
+                    <input type="text" class="form-control inputUser text-white ps-5 mt-3" name="email" id="email" value="<?= $email ?>" required>
                     <input type="hidden" class="form-control" id="email_kodau" value="<?= stripUnicode(($email)) ?>">
                     <span class="label fs-2 pb-4"><i class="fa-solid fa-envelope pe-3 fs-1"></i>Địa chỉ Email</span>
                     <p class="mt-5 ms-5 fw-bold fs-5"><?php echo $email ?></p>
@@ -85,7 +85,7 @@
             </div>
             <div class="form-group mt-4">
                 <label for="username" class="inp">
-                    <input type="text" class="form-control inputUser" name="didong" id="didong" value="<?= stripUnicode($didong) ?>" required>
+                    <input type="text" class="form-control inputUser text-white ps-5 mt-3" name="didong" id="didong" value="<?= stripUnicode($didong) ?>" required>
                     <span class="label fs-2 pb-4"><i class="fa-solid fa-phone pe-3 fs-1"></i>Số di động</span>
                     <p class="mt-5 ms-5 fw-bold fs-5"><?php echo $didong ?></p>
                 </label>
@@ -93,7 +93,7 @@
             </div>
             <div class="form-group mt-4">
                 <label for="username" class="inp">
-                    <input type="text" class="form-control inputUser" name="dienthoai" id="dienthoai" value="<?= stripUnicode($dienthoai) ?>" required>
+                    <input type="text" class="form-control inputUser text-white ps-5 mt-3" name="dienthoai" id="dienthoai" value="<?= stripUnicode($dienthoai) ?>" required>
                     <span class="label fs-2 pb-4"><i class="fa-solid fa-envelope pe-3 fs-1"></i>SĐT (Công việc)</span>
                     <p class="mt-5 ms-5 fw-bold fs-5"><?php echo $dienthoai ?></p>
                 </label>
@@ -101,7 +101,7 @@
             </div>
             <div class="form-group mt-4">
                 <label for="username" class="inp">
-                    <input type="text" class="form-control inputUser" name="congty" id="congty" value="<?= $congty ?>" required>
+                    <input type="text" class="form-control inputUser text-white ps-5 mt-3" name="congty" id="congty" value="<?= $congty ?>" required>
                     <input type="hidden" class="form-control" id="congty_kodau" value="<?= stripUnicode(($congty)) ?>">
                     <span class="label fs-2 pb-4"><i class="fa-solid fa-building pe-3 fs-1"></i>Công ty</span>
                     <p class="mt-5 ms-5 fw-bold fs-5"><?php echo $congty ?></p>
@@ -110,7 +110,7 @@
             </div>
             <div class="form-group mt-4">
                 <label for="username" class="inp">
-                    <input type="text" class="form-control inputUser" name="chucvu" id="chucvu" value="<?= $chucvu ?>" required>
+                    <input type="text" class="form-control inputUser text-white ps-5 mt-3" name="chucvu" id="chucvu" value="<?= $chucvu ?>" required>
                     <input type="hidden" class="form-control" id="chucvu_kodau" value="<?= stripUnicode(($chucvu)) ?>">
                     <span class="label fs-2 pb-4"><i class="fa-solid fa-briefcase pe-3 fs-1"></i>Nghề nghiệp</span>
                     <p class="mt-5 ms-5 fw-bold fs-5"><?php echo $chucvu ?></p>
@@ -119,7 +119,7 @@
             </div>
             <div class="form-group mt-4">
                 <label for="username" class="inp">
-                    <input type="text" class="form-control inputUser" name="diachi" id="diachi" value="<?= $diachi ?>" required>
+                    <input type="text" class="form-control inputUser text-white ps-5 mt-3" name="diachi" id="diachi" value="<?= $diachi ?>" required>
                     <input type="hidden" class="form-control" id="diachi_kodau" value="<?= stripUnicode(($diachi)) ?>">
                     <span class="label fs-2 pb-4"><i class="fa-solid fa-location-dot pe-3 fs-1"></i>Địa chỉ công ty</span>
                     <p class="mt-5 ms-5 fw-bold fs-5"><?php echo $diachi ?></p>
@@ -128,23 +128,23 @@
             </div>
             <div class="form-group mt-4">
                 <label for="username" class="inp">
-                    <input type="text" class="form-control inputUser" name="website1" id="website1" value="<?= $website1 ?>" required>
+                    <input type="text" class="form-control inputUser text-white ps-5 mt-3" name="website1" id="website1" value="<?= $website1 ?>" required>
                     <input type="hidden" class="form-control" id="website1_kodau" value="<?= stripUnicode(($website1)) ?>">
                     <span class="label fs-2 pb-4"><i class="fa-solid fa-globe pe-3 fs-1"></i>Website</span>
                     <p class="mt-5 ms-5 fw-bold fs-5"><?php echo $website1 ?></p>
                 </label>
                 <hr>
             </div>
-            <div class="text-center mt-5">
+            <div class="text-center pt-5">
                 <!--<img src="https://ecard.zintech.vn/images/QR_profile.png" alt="QR_profile" width="300">-->
-                <div id="card" style="left: 10%">
+                <div id="card" style="left: 50px">
                     <div id="qr-code"></div>
                 </div>
                 <button type="submit" name="luuthongtin" value="1" class="form-control btn submit px-4 py-3 fs-4 fw-bold text-white">Lưu</button>
             </div>
         </form>
-        <h4 class="website_footer mt-5 text-center">www.mcards.vn</h4>
-        <div class="pb-5 text-center">
+        <h4 class="website_footer text-center">www.mcards.vn</h4>
+        <div class="text-center">
             <img src="./images/header_profile.png" alt="logo_Mcard" width="100">
         </div>
         <a id="back-to-top" class="btn btn-primary text-white position-fixed" style="position: fixed;
@@ -183,36 +183,33 @@
         </div>
     </div>
     <!-- Modal snap Video -->
-    <div class="modal fade bg-dark" id="modalVideo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-        <div class="modal-dialog">
+    <div class="modal fade bg-dark" id="modalVideo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body bg-dark border border-info rounded-2">
                     <div class="row mx-auto flex-column justify-content-center align-items-center text-center">
                         <button class="mt-3 btn btn-danger col-2" id="start-camera"><i class="fa-solid fa-video"></i></button>
                         <video class="col-md-8 col-12" id="video" width="300" height="300" autoplay></video>
-                        <canvas class="col-md-8 col-12" id="canvas" width="150" height="150"></canvas>
-                        <textarea class="col-md-8 col-12" id="dataImgSnap" cols="30" rows="10" readonly style="display: none;"></textarea>
+                        <canvas class="col-md-8 col-12 d-none" id="canvas" width="300" height="300"></canvas>
+                        <button class="btn btn-danger mt-3" id="click-photo" data-bs-dismiss="modal">Click Photo</button>
                     </div>
-                    <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal">Close</button>
-                    <button class="btn btn-danger mt-3" id="click-photo">Click Photo</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Modal Crop Image -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-</script>
+    <!-- Modal Crop Image -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- js profile -->
-<script src="js/CropperJs/cropper.min.js"></script>
-<script src="js/profile.js"></script>
-<script src="js/dom-to-image.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-<script src="cropperjs/cropper.min.js"></script>
-<script src="js/avatarzintech.js"></script>
-<script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- js profile -->
+    <script src="js/CropperJs/cropper.min.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/dom-to-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="cropperjs/cropper.min.js"></script>
+    <script src="js/avatarzintech.js"></script>
+    <script src="js/script.js" defer></script>

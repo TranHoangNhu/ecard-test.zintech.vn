@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Roboto", sans-serif;
   background-color: #e4f7fb;
@@ -19,6 +24,9 @@ hr {
   top: 165px;
   z-index: 2;
 } */
+nav {
+  z-index: 900;
+}
 nav .nav-link {
   color: #0e69ae;
 }
@@ -27,14 +35,25 @@ nav .nav-link {
   color: #0e69af;
   font-weight: bold;
 }
+.user_avatarName {
+  position: relative;
+  top: -170px;
+  min-height: 400px;
+  background-image: url(../images/userAvatar_bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 100;
+  background-position-y: bottom;
+  padding-top: 170px;
+}
 .main {
   position: relative;
-  top: 100px;
-  background-image: linear-gradient(180deg, #0e69af, #f5feff);
-  /* background-image: url("../images/footer_bg.png");
-  background-position-x: center;
+  top: -220px;
+  background-image: linear-gradient(180deg, #0e69af, #e4f7fb);
+  /* background-image: url("../images/main_bg.png");
   background-position-y: top;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  background-size: contain; */
 }
 
 .main .main_bg {
@@ -89,14 +108,13 @@ nav .nav-link {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  border: 0;
+  border: none !important;
   font-family: inherit;
   padding: 35px 15px 0 12px;
   height: 65px;
   font-size: 16px;
   font-weight: 400;
   background: rgba(0, 0, 0, 0.02);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
   color: #000;
   transition: all 0.15s ease;
   font-weight: bold;
@@ -245,12 +263,4 @@ button[type="submit"]:hover {
 
 .website_footer {
   color: #0c4e80;
-}
-
-.imgFooter {
-  position: absolute;
-  bottom: -1670px;
-  left: 0;
-  width: 100vw;
-  z-index: -1;
 }

@@ -169,13 +169,13 @@ if (isset($_POST['luuthongtin'])) {
                         <div class="form-group mt-5">
                             <label for="password" class="inp">
                                 <input type="password" name="matkhaucu" class="form-control w-100 oldPasswordInput" required>
-                                <span class="label fs-4 pb-5">Mật khẩu cũ *</span>
+                                <span class="label fs-4 pb-5" style="color: #0e69af !important;">Mật khẩu cũ *</span>
                             </label>
                         </div>
                         <div class="form-group mt-2">
                             <label for="password" class="inp">
                                 <input id="password-field" type="password" name="matkhaumoi" class="form-control w-100 newPasswordInput" required>
-                                <span class="label fs-4 pb-5">Mật khẩu mới *</span>
+                                <span class="label fs-4 pb-5" style="color: #0e69af !important;">Mật khẩu mới *</span>
                                 <span class="fa fa-fw field-icon toggle-password fa-eye"></span>
                             </label>
                         </div>
@@ -191,7 +191,7 @@ if (isset($_POST['luuthongtin'])) {
     </div>
     <!-- End Change PassWord modal -->
     <!-- Confirm PassWord modal -->
-    <div class="px-4 modal fade" id="ConfirmPass" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-modal="true">
+    <div class="px-4 modal fade" id="ConfirmPass" tabindex="-1" style="display: none;">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content" style="background-color: #e4f7fb">
                 <div class="modal-header d-flex flex-column">
@@ -204,7 +204,7 @@ if (isset($_POST['luuthongtin'])) {
                         <div class="form-group mt-5">
                             <label for="password" class="inp">
                                 <input type="password" name="password" class="form-control w-100 ConfirmPassInput" required>
-                                <span class="label fs-4 pb-5">Xác nhận mật khẩu *</span>
+                                <span class="label fs-4 pb-5" style="color: #0e69af !important;">Xác nhận mật khẩu *</span>
                             </label>
                         </div>
                         <div class="form-group row mx-auto mt-5 ">
