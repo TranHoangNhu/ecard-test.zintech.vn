@@ -128,6 +128,8 @@ function fixInfo() {
 
   confirmBtn.addEventListener("click", () => {
     const confirmPass = document.querySelector(".ConfirmPassInput").value;
+    const defaultAvatar = document.querySelector(".profile-pic:nth-child(1)");
+    const editAvatar = document.querySelector(".profile-pic.profile-pic-edit");
     if (confirmPass == pass) {
       //alert('Chế độ chính sửa thông tin được kích hoạt!');
 
@@ -138,6 +140,8 @@ function fixInfo() {
       for (j = 0; j < infoUser.length; ++j) {
         infoUser[j].style.display = "none";
       }
+      editAvatar.classList.remove('d-none');
+      defaultAvatar.classList.add('d-none');
       var myModalEl = document.getElementById("ConfirmPass");
       var modal = bootstrap.Modal.getInstance(myModalEl);
       modal.hide();

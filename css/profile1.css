@@ -264,3 +264,24 @@ button[type="submit"]:hover {
 .website_footer {
   color: #0c4e80;
 }
+
+@media (min-width: 576px) {
+  .user_avatarName {
+    background-size: cover;
+    min-height: 450px;
+  }
+  .header_name_user {
+    z-index: 10000;
+  }
+  .header_name_user h1,
+  .header_name_user span {
+    color: #e4f7fb;
+  }
+}
+
+@media (min-width: 768px) {
+  .header_name_user h1,
+  .header_name_user span {
+    color: #0e69af;
+  }
+}

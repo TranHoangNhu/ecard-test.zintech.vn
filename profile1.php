@@ -41,6 +41,9 @@
             <div class="col-6">
                 <form method="post" class="pt-3">
                     <div class="profile-pic">
+                    <img src="./images/user_avatar.png" id="output" width="150" />
+                    </div>
+                    <div class="profile-pic profile-pic-edit d-none">
                         <label class="-label" for="file3">
                             <i class="pt-2 pe-2 fa-solid fa-camera"></i>
                             <span>Upload File</span>
@@ -49,14 +52,14 @@
                         <!-- <img src="./images/user_avatar.png" id="output" width="150" /> -->
                         <img src="./images/user_avatar.png" id="output" width="150" />
                     </div>
-                    <button id="startVid" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVideo">
-                        <i class="fa-solid fa-clapperboard"></i>
-                    </button>
+                    <!-- <button id="startVid" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVideo">
+                        <i class="fa-solid fa-clapperboard"></i>`
+                    </button> -->
                 </form>
             </div>
-            <div class="col-6 pb-5">
-                <h1 class="header_name">YOUR NAME</h1>
-                <span class="header_position">Operation manager</span>
+            <div class="col-6 pb-5 header_name_user">
+                <h1 class="header_name"><?php echo $tenkh ?></h1>
+                <span class="header_position">"<?= stripUnicode(($chucvu)) ?></span>
             </div>
         </div>
     </div>
